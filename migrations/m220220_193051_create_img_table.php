@@ -12,9 +12,9 @@ class m220220_193051_create_img_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('imgs', [
+        $this->createTable('media', [
             'id' => $this->primaryKey(),
-            'name' => $this->string()->notNull()->unique(),
+            'filename' => $this->text(),
             'uploaded_at' => $this->dateTime(),
         ]);
     }

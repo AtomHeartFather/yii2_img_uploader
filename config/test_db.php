@@ -1,6 +1,14 @@
 <?php
-$db = require __DIR__ . '/db.php';
-// test database! Important not to run tests on production or development databases
-$db['dsn'] = 'mysql:host=localhost;dbname=yii2basic_test';
 
-return $db;
+namespace app\controllers;
+
+use yii\web\Controller;
+
+class ImgController extends Controller
+{
+    
+    public function actionSay($message = 'Hello')
+    {
+        return $this->render('say', ['message' => $message]);
+    }
+}
